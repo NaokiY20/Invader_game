@@ -3,7 +3,9 @@ import random
 
 
 
-Invaders = []    # reocrding all the invader instances
+Invaders = []   # reocrding all the invader instances
+Bullets = []  # recording all the bullet instances
+
 
 class AirCraft:
     def __init__(self, input_side=config.INVADER, inputel=config.MED):
@@ -16,6 +18,13 @@ class AirCraft:
         else:
             config.logging.error('UNEXPECTED VALUE of VALUE in AirCraft')
             config.sys.exit()
+
+
+class Bullet:
+    def __init__(self, headpoint, input_side=config.INVADER):
+        self.side = input_side
+        self.tip_place = [headpoint[0], headpoint[1]]
+
 
 
 Fighter = AirCraft(config.FIGHTER)
