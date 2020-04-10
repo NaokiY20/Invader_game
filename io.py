@@ -99,14 +99,14 @@ def main():
         # background
         screen.fill(BCG_COL)
 
+        # bullets
+        for bul in invader.Bullets:
+            bullet_display(bul.tip_place, screen)
+
         # aircrafts
         for inv in invader.Invaders:
             aircraft_display(inv.headpoint, screen)
         aircraft_display(invader.Fighter.headpoint, screen, FIGHTER)
-
-        # bullets
-        for bul in invader.Bullets:
-            bullet_display(bul.tip_place, screen)
 
         # guards
         guard_display(screen)
@@ -130,7 +130,7 @@ def main():
         pygame.display.update()
 
         ### LOADING TIME
-        pygame.time.wait(100)
+        pygame.time.wait(LOAD_TIME)
 
 
 

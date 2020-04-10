@@ -27,7 +27,8 @@ LIFE_MAX = 1
 
 ### FOR DISPLAY INDEX
 HRZ = 0 # horizontal
-VRT = 1 # vertical
+VRT = 1  # vertical
+LOAD_TIME = 100  # loading time (mili sec)
 
 
 ### DISPLAYED SIZE

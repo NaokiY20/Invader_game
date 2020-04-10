@@ -31,7 +31,9 @@ Blocks = []
 # fighter
 Fighter = AirCraft(config.FIGHTER)
 # blocks
-for i in range(config.GRD_SCTR):
+for sector in range(config.GRD_SCTR):
+    Blocks.append([])
     for hrz in range(config.GRD_BLCS):
+        Blocks[sector].append([])
         for vrt in range(config.GRD_BLCS):
-            Bullets.append(config.BLC_LEFT)
+            Blocks[sector][hrz].append(config.BLC_LEFT)
